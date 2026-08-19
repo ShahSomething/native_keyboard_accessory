@@ -1,0 +1,51 @@
+name: native_keyboard_accessory
+description: >-
+  A real UIKit inputAccessoryView for Flutter text fields on iOS — the
+  previous / next / done bar above the keyboard, part of the keyboard itself
+  rather than a Flutter overlay.
+version: 0.1.0
+repository: https://github.com/ShahSomething/native_keyboard_accessory
+issue_tracker: https://github.com/ShahSomething/native_keyboard_accessory/issues
+
+topics:
+  - keyboard
+  - ios
+  - text-input
+  - accessibility
+  - forms
+
+screenshots:
+  - path: doc/images/bar_light.webp
+    description: >-
+      The accessory bar above an iOS number pad in light mode, showing the previous, next, and done buttons.
+  - path: doc/images/bar_dark.webp
+    description: >-
+      The same bar in dark mode, where the light and dark colours you supply resolve as one dynamic UIColor.
+  - path: doc/images/bar_default_style.webp
+    description: >-
+      The zero-config appearance with no style supplied: an unfilled pill and label-coloured icons.
+  - path: doc/images/bar_done_only.webp
+    description: >-
+      The doneOnly layout, for fields that are not part of a traversable form, so the chevrons are dropped.
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.27.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      # iOS only by design. Android numeric keyboards already include an IME
+      # action key, so there is no missing affordance to replace; every Dart
+      # method is a no-op elsewhere rather than an error.
+      ios:
+        pluginClass: NativeKeyboardAccessoryPlugin

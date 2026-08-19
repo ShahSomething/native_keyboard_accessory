@@ -1,0 +1,29 @@
+# .pubignore REPLACES .gitignore for `pub publish` rather than adding to it, so
+# this file must be a superset: every publish-relevant .gitignore entry plus the
+# exclusions below. Dropping the inherited entries lets build/ and
+# example/build/ back into the archive (measured: 27 MB, 0 warnings).
+
+# Inherited from .gitignore
+build/
+.dart_tool/
+.flutter-plugins-dependencies
+coverage/
+**/doc/api/
+pubspec.lock
+*.iml
+*.ipr
+*.iws
+.idea/
+.DS_Store
+
+# Regenerable example Xcode project — carries no package source, and is the sole
+# remaining source of tentwenty strings in the archive. Stays tracked in git.
+example/ios/
+
+# Agent guidance and internal workflow artifacts — these serve contributors, not
+# package consumers. All stay tracked in git; CLAUDE.md remains a symlink to
+# AGENTS.md and keeps working as the Claude Code entry point.
+AGENTS.md
+CLAUDE.md
+ai_specs/
+.act/
