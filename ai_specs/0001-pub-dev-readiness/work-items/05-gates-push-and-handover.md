@@ -87,26 +87,26 @@ unauthenticated visibility check here.
 
 ## Acceptance criteria
 
-- [ ] `flutter analyze` at the package root reports zero issues, with real output included in the report.
-- [ ] `flutter analyze` run from inside `example/` reports zero issues, with real output included in the report.
-- [ ] `flutter test` passes all tests, with real output included in the report.
-- [ ] `flutter pub publish --dry-run` reports zero warnings, with real output included in the report.
-- [ ] The archive size the dry-run reports is stated explicitly and asserted not to exceed 400 KB.
-- [ ] The unpacked-archive search for `TenTwenty`, `tentwenty`, and `dev@tentwenty.me` is re-run against the final archive and reported as finding nothing.
-- [ ] The character count of each `screenshots:` description is reported per entry, and every count is between 10 and 160.
-- [ ] `curl -s -o /dev/null -w "%{http_code}" https://api.github.com/repos/ShahSomething/native_keyboard_accessory` is run unauthenticated and its status code is reported, including when it is not `200`.
-- [ ] Neither `git ls-remote` nor `gh` is used as a substitute for that visibility check.
-- [ ] `git init -b main` is used, so the branch is `main` explicitly rather than whatever unset `init.defaultBranch` would produce.
-- [ ] The work is committed as a single initial commit.
-- [ ] That commit includes `ai_specs/0001-pub-dev-readiness/spec.md`, `ai_specs/0001-pub-dev-readiness/interview-ledger.md`, and the `work-items/` directory.
-- [ ] `https://github.com/ShahSomething/native_keyboard_accessory.git` is configured as `origin`.
-- [ ] `main` is pushed with upstream tracking set.
-- [ ] `flutter pub publish` is not executed at any point.
-- [ ] pub.dev credentials are neither authenticated nor altered.
-- [ ] The exact publish command is surfaced to the user on completion.
-- [ ] It is surfaced together with both user-owned preconditions: that the repository must be public, and that the `0.1.0` versus `1.0.0` decision must be settled first because choosing `1.0.0` changes `pubspec.yaml` `version`, podspec `s.version`, the `CHANGELOG.md` heading, and the `^0.1.0` constraint in the README install snippet.
-- [ ] While the unauthenticated check returns anything other than `200`, the publish command is presented as gated behind the visibility flip rather than as ready to run.
-- [ ] Open Question 5 is reported as outstanding without being acted on.
+- [x] `flutter analyze` at the package root reports zero issues, with real output included in the report.
+- [x] `flutter analyze` run from inside `example/` reports zero issues, with real output included in the report.
+- [x] `flutter test` passes all tests, with real output included in the report.
+- [x] `flutter pub publish --dry-run` reports zero warnings, with real output included in the report.
+- [x] The archive size the dry-run reports is stated explicitly and asserted not to exceed 400 KB.
+- [x] The unpacked-archive search for `TenTwenty`, `tentwenty`, and `dev@tentwenty.me` is re-run against the final archive and reported as finding nothing.
+- [x] The character count of each `screenshots:` description is reported per entry, and every count is between 10 and 160.
+- [x] `curl -s -o /dev/null -w "%{http_code}" https://api.github.com/repos/ShahSomething/native_keyboard_accessory` is run unauthenticated and its status code is reported, including when it is not `200`.
+- [x] Neither `git ls-remote` nor `gh` is used as a substitute for that visibility check.
+- [x] `git init -b main` is used, so the branch is `main` explicitly rather than whatever unset `init.defaultBranch` would produce.
+- [x] The work is committed as a single initial commit.
+- [x] That commit includes `ai_specs/0001-pub-dev-readiness/spec.md`, `ai_specs/0001-pub-dev-readiness/interview-ledger.md`, and the `work-items/` directory.
+- [x] `https://github.com/ShahSomething/native_keyboard_accessory.git` is configured as `origin`.
+- [x] `main` is pushed with upstream tracking set.
+- [x] `flutter pub publish` is not executed at any point.
+- [x] pub.dev credentials are neither authenticated nor altered.
+- [x] The exact publish command is surfaced to the user on completion.
+- [x] It is surfaced together with both user-owned preconditions: that the repository must be public, and that the `0.1.0` versus `1.0.0` decision must be settled first because choosing `1.0.0` changes `pubspec.yaml` `version`, podspec `s.version`, the `CHANGELOG.md` heading, and the `^0.1.0` constraint in the README install snippet.
+- [x] While the unauthenticated check returns anything other than `200`, the publish command is presented as gated behind the visibility flip rather than as ready to run.
+- [x] Open Question 5 is reported as outstanding without being acted on.
 
 ## Covers
 
