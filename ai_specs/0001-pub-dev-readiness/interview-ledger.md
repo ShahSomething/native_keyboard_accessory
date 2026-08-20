@@ -203,3 +203,15 @@ Answer: Leave it outstanding. The user chose to publish under their individual p
 Decision: Deferred. No publisher verification is set up by this work, and no pub.dev credentials are authenticated or altered. A verified publisher may be added later.
 
 Reason: Open Question 5 was raised during the interview and had no ledger record of its own; L5 is `current` and does not cover it. This record closes that gap. Adding a verified publisher after the fact is a manual pub.dev administration step, which the user accepted.
+
+### L14
+
+Status: current
+
+Question: Which pub.dev account should the first upload permanently bind the package to?
+
+Answer: `shah.raza52@gmail.com`, confirmed by the user on 2026-08-20.
+
+Decision: The package is published under `shah.raza52@gmail.com`. Verified locally by decoding the `idToken` claim in `pub-credentials.json`: `email_verified: true`, and not a `@tentwenty.me` address. Credentials were read only, never authenticated or altered.
+
+Reason: The first upload binds the package to the authenticated account permanently, and L1 and L2 moved ownership from TenTwenty to the individual. The account is a third address, distinct from both the git identity `shahsomething@yahoo.com` and TenTwenty, so it was confirmed explicitly rather than assumed. With publisher verification deferred in L13, this account is the sole owner of record.
